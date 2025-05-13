@@ -1,34 +1,52 @@
-# UsefulGithubCICD
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a id="readme-top"></a>
 
-A collection of practical GitHub Actions workflows, templates, and automation utilities to streamline CI/CD processes for your repositories. This project provides ready-to-use workflows for cleaning up failed runs, resetting all actions, and more, making it easier to maintain healthy and efficient GitHub repositories.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-LoveDoLove-blue?logo=github)](https://github.com/sponsors/LoveDoLove)
 
 ---
 
+# UsefulGithubCICD
+
+A collection of practical GitHub Actions workflows, templates, and automation utilities to streamline CI/CD processes for your repositories. This project provides ready-to-use workflows for cleaning up failed runs, resetting all actions, and more, making it easier to maintain healthy and efficient GitHub repositories.
+
+---
+
 ## Table of Contents
-- [About](#about)
+- [About](#about-the-project)
 - [Workflows](#workflows)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Funding](#funding)
+- [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
 
 ---
 
-## About
+## About The Project
 
-This repository is designed to help you manage and automate your GitHub repositories with useful CI/CD workflows. It includes:
-- Automated cleanup of failed workflow runs
-- Resetting/cancelling all in-progress and queued workflows
-- Templates and best practices for GitHub Actions
+This repository provides a set of reusable GitHub Actions workflows for cleaning up workflow runs, managing failed actions, and automating repository maintenance. Inspired by [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template), this project is tailored and maintained by [LoveDoLove](https://github.com/LoveDoLove).
 
-These tools help keep your repository clean and your CI/CD pipelines running smoothly.
+Use these templates to:
+* Automate cleanup of failed or all workflow runs
+* Maintain a clean and efficient CI/CD environment
+* Quickly bootstrap new repositories with best-practice workflows
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* [GitHub Actions](https://github.com/features/actions)
+* [actions/github-script](https://github.com/actions/github-script)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Workflows
 
@@ -37,12 +55,12 @@ Deletes up to 100 of the most recent failed workflow runs to keep your repositor
 - **File:** `.github/workflows/cleanup_failed_actions.yml`
 - **Trigger:** Manual (`workflow_dispatch`)
 
-### 2. Reset All Actions
-Cancels all in-progress and queued workflow runs for the repository.
-- **File:** `.github/workflows/reset_all_actions.yml`
+### 2. Cleanup All Actions
+Deletes all workflow runs except the currently running one.
+- **File:** `.github/workflows/cleanup_all_actions.yml`
 - **Trigger:** Manual (`workflow_dispatch`)
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -56,7 +74,7 @@ To use these workflows in your own repository:
 - A GitHub repository with Actions enabled
 - Sufficient permissions to run and manage workflows
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 
@@ -65,42 +83,75 @@ To use these workflows in your own repository:
   - Select `Cleanup Failed Runs` workflow
   - Click `Run workflow` to delete failed runs
 
-- **Reset All Actions:**
+- **Cleanup All Actions:**
   - Go to the Actions tab
-  - Select `Reset All Actions` workflow
-  - Click `Run workflow` to cancel all in-progress and queued runs
+  - Select `Cleanup All Actions` workflow
+  - Click `Run workflow` to delete all runs except the current one
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Roadmap
+
+- [x] Add cleanup workflows for all and failed runs
+- [ ] Add more automation templates
+- [ ] Add documentation for advanced usage
+
+See the [open issues](https://github.com/LoveDoLove/UsefulGithubCICD/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you would like to change.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a pull request
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
----
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+Distributed under the MIT License. See `LICENSE` for more information.
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Funding
 
 If you find this project useful, consider sponsoring via [GitHub Sponsors](https://github.com/sponsors/LoveDoLove) or check the [FUNDING.yml](.github/FUNDING.yml) for more options.
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+LoveDoLove - [GitHub](https://github.com/LoveDoLove)
+
+Project Link: [https://github.com/LoveDoLove/UsefulGithubCICD](https://github.com/LoveDoLove/UsefulGithubCICD)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acknowledgments
 
+- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template) (template inspiration)
+- [actions/github-script](https://github.com/actions/github-script)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
----
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-shield]: https://img.shields.io/github/contributors/LoveDoLove/UsefulGithubCICD.svg?style=for-the-badge
+[contributors-url]: https://github.com/LoveDoLove/UsefulGithubCICD/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/LoveDoLove/UsefulGithubCICD.svg?style=for-the-badge
+[forks-url]: https://github.com/LoveDoLove/UsefulGithubCICD/network/members
+[stars-shield]: https://img.shields.io/github/stars/LoveDoLove/UsefulGithubCICD.svg?style=for-the-badge
+[stars-url]: https://github.com/LoveDoLove/UsefulGithubCICD/stargazers
+[issues-shield]: https://img.shields.io/github/issues/LoveDoLove/UsefulGithubCICD.svg?style=for-the-badge
+[issues-url]: https://github.com/LoveDoLove/UsefulGithubCICD/issues
+[license-shield]: https://img.shields.io/github/license/LoveDoLove/UsefulGithubCICD.svg?style=for-the-badge
+[license-url]: https://github.com/LoveDoLove/UsefulGithubCICD/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/LoveDoLove
